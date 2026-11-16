@@ -139,23 +139,37 @@ section{ padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 }
 .split .quote + .quote{ margin-top:2rem; }
 
-/* ---------- aanbod als lijst, geen kaarten ---------- */
-.offers{ list-style:none; margin:2rem 0; padding:0; border-top:1px solid var(--line); }
-.offer{
-  display:grid; gap:.75rem 1.5rem;
-  padding-block: 1.5rem;
-  border-bottom:1px solid var(--line);
+/* ---------- herkenning ---------- */
+.dash-list{ list-style:none; margin:1.25rem 0 1.5rem; padding:0; }
+.dash-list li{ position:relative; padding-left:1.6rem; margin-bottom:.9rem; font-size: var(--step-1); line-height:1.45; }
+.dash-list li::before{ content:""; position:absolute; left:0; top:.7em; width:.9rem; height:3px; background: var(--orange); border-radius:2px; }
+.punch{ font-weight:700; font-size: var(--step-1); margin:0; }
+
+/* ---------- stappen ---------- */
+.steps{ margin:1.25rem 0 0; padding:0; list-style:none; counter-reset: stap; }
+.steps li{ counter-increment: stap; position:relative; padding-left:3rem; margin-bottom:1.25rem; }
+.steps li:last-child{ margin-bottom:0; }
+.steps li::before{
+  content: counter(stap); position:absolute; left:0; top:-.1rem;
+  width:2rem; height:2rem; border-radius:50%;
+  border:2px solid var(--text); font-weight:700;
+  display:flex; align-items:center; justify-content:center;
 }
-.offer h3{ margin-bottom:.3rem; }
-.offer p{ margin:0 0 .4rem; }
-.offer-side{ display:flex; align-items:center; gap:1.5rem; }
-.offer-price{ font-size: var(--step-1); font-weight:700; margin:0 !important; white-space:nowrap; }
-.offer-bubble{ width:96px; }
-@media (min-width: 640px){
-  .offer{ grid-template-columns: 110px 1fr auto; align-items:start; }
-  .offer-bubble{ width:110px; }
-  .offer-side{ flex-direction:column; align-items:flex-end; gap:.25rem; }
-}
+
+/* ---------- aanbod: 2x2 tegels ---------- */
+.offer-head{ max-width:40rem; margin:0 auto 2rem; }
+.tiles{ list-style:none; margin:0 auto; padding:0; display:grid; gap:3rem 2rem; max-width:44rem; }
+@media (min-width: 560px){ .tiles{ grid-template-columns: 1fr 1fr; } }
+.tile{ text-align:center; }
+.tile-bubble{ height:80px; width:auto; margin:0 auto .75rem; }
+.tile-bubble-sq{ height:110px; margin-top:-15px; margin-bottom:.6rem; }
+.tile h3{ margin-bottom:.25rem; }
+.tile p{ margin:0 0 .25rem; color: var(--text-soft); }
+.tile .tile-price{ color: var(--text); font-weight:700; font-size: var(--step-1); display:flex; gap:.75rem; justify-content:center; align-items:center; flex-wrap:wrap; }
+.tile-price .link-go{ font-size:1rem; }
+.guarantee-line{ text-align:center; font-weight:700; max-width:40rem; margin:2.5rem auto .5rem; }
+.center-text{ text-align:center; }
+
 .link-go{
   display:inline-flex; align-items:center; min-height:44px;
   font-weight:700; color: var(--btn); text-decoration:underline; text-underline-offset:.2em;
