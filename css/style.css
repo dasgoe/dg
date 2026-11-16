@@ -140,7 +140,8 @@ section{ padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .split .quote + .quote{ margin-top:2rem; }
 
 /* ---------- ballon boven een sectietitel (enkel op wit) ---------- */
-.section-bubble{ width:190px; margin-bottom:1rem; }
+.section-bubble{ width:150px; margin-bottom:2rem; opacity:.9; }
+@media (min-width: 860px){ .section-bubble{ width:170px; } }
 
 /* ---------- herkenning ---------- */
 .dash-list{ list-style:none; margin:1.25rem 0 1.5rem; padding:0; }
@@ -149,7 +150,8 @@ section{ padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .punch{ font-weight:700; font-size: var(--step-1); margin:0; }
 
 /* ---------- aanbod: menu, één regel per formule ---------- */
-.offer-bubble{ width:110px; margin-bottom:.5rem; }
+.offer-bubble{ width:150px; margin-bottom:2rem; opacity:.9; }
+@media (min-width: 860px){ .offer-bubble{ width:170px; } }
 .menu{ list-style:none; margin:1.5rem 0; padding:0; border-top:1px solid var(--line); }
 .menu li{
   display:grid; grid-template-columns: 1fr auto auto; gap:.25rem 1.25rem; align-items:center;
@@ -179,8 +181,8 @@ section{ padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 
 /* ---------- slot: J'ose enfin ---------- */
 .closing{ display:grid; gap:1.5rem; align-items:center; max-width:52rem; }
-.closing-bubble{ width:220px; }
-@media (min-width: 760px){ .closing{ grid-template-columns: 300px 1fr; gap:3rem; } .closing-bubble{ width:100%; } }
+.closing-bubble{ width:190px; opacity:.9; }
+@media (min-width: 760px){ .closing{ grid-template-columns: 230px 1fr; gap:3rem; } .closing-bubble{ width:220px; } }
 .section-line{ border-top:1px solid var(--line); }
 
 /* ---------- FAQ ---------- */
