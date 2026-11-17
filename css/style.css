@@ -79,6 +79,12 @@ section{ padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .brand{ display:flex; align-items:center; text-decoration:none; }
 .brand-logo-img{ width:56px; height:56px; }
 
+/* ---------- aankondiging boven de hero (tijdelijk: na de datum weghalen) ---------- */
+.announce{ margin:0; background: var(--block-a); text-align:center; font-size:.95rem; }
+.announce a{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:.25rem .75rem; min-height:44px; padding:.5rem 1rem; text-decoration:none; color: var(--text); }
+.announce-go{ font-weight:700; color: var(--btn); text-decoration:underline; text-underline-offset:.2em; }
+.announce-go::after{ content:"\00a0→"; }
+
 /* ---------- knoppen ---------- */
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
